@@ -1,0 +1,42 @@
+ #syntax 
+
+$(selector).action(callback)
+
+example :
+
+$("#btn").click(function(){
+    alert("Welcome to Kalyug!!");
+});
+
+
+$("#btn").click(function(){
+    $(#image-id").hide(1000,function(){
+        console.log("Image is Hidden");
+    });
+});
+
+# This first line you will see everywhere , it means that dont execute 
+the inside funtion until the html documnet is ready.
+
+$(document).ready(function(){
+
+ $("#btn").click(function(){
+
+ alert("Welcome to kalyug!!");
+ });
+ });
+
+
+
+# when you use more than one library where the symbol to denote is $
+then there may be conflict so we use this 
+jQuery.noConflict();
+
+jQuery(document).ready(function($){
+
+ $("#btn").click(function(){
+
+ alert("Welcome to kalyug!!");
+ });
+
+ });
